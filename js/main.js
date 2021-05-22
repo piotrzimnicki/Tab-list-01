@@ -5,10 +5,10 @@ let tabs = document.querySelectorAll('.tab');
 
 function addEvent () {
     for (const navBtn of navBtns) {
-        navBtn.addEventListener('click',test);
+        navBtn.addEventListener('click',changeTab);
     }
 }
-const test = (e) => {
+const changeTab = (e) => {
     let btn = e.target
     let target = btn.dataset.target;
     tabs.forEach (tab => tab.style.display ="none")
