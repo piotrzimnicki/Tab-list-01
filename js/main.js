@@ -9,12 +9,11 @@ function addEvent () {
     }
 }
 const changeTab = (e) => {
-    let btn = e.target
+    let btn = e.target;
     let target = btn.dataset.target;
-    tabs.forEach (tab => tab.style.display ="none")
-    navBtns.forEach (navBtn => navBtn.classList.remove('active'))
+    tabs.forEach (tab => tab.style.display ="none");
+    navBtns.forEach (navBtn => navBtn.classList.remove('active'));
     document.getElementById(target).style.display = "block";
-    document.querySelector(`[data-target=${target}]`).classList.add('active')
+    document.querySelector(`[data-target=${target}]`).classList.add('active');
 }
-
 window.onload = addEvent();
